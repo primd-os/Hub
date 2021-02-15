@@ -14,5 +14,5 @@
     },
     "type": "minecraft:flat"
   },
-  "type": "missilewars:hub_type"
+  "type": "hub:hub_type"
 }
