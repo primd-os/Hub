@@ -8,4 +8,5 @@ execute as @a[scores={Hub=1}] in hub:hub run effect give @s instant_health 1 100
 
 execute as @a[scores={Hub=1}] in hub:hub run clear @s
 execute as @a[scores={Hub=1}] in hub:hub run tp 0 100 0
+execute as @a[scores={Hub=1}] in hub:hub run spawnpoint @s 0 100 0
 execute as @a[scores={Hub=1}] run scoreboard players set @s Hub 0
