@@ -1,5 +1,5 @@
 {
     "values": [
-        "hub:start/setup"
+        "#load:__init"
     ]
 }

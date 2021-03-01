@@ -1,0 +1,1 @@
+execute as @a at @s run kill @s[y=0,dy=-5]

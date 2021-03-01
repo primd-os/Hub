@@ -1,0 +1,10 @@
+{
+    "criteria": {
+      "first_criterion": {
+        "trigger": "minecraft:inventory_changed"
+      }
+    },
+    "rewards": {
+      "function": "hub:main/inventory_changed"
+    }
+  }
