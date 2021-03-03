@@ -1,5 +1,9 @@
 {
     "values": [
+        "substring:load",
+        "regex:load",
+        "ntca:load",
+        "string:load",
     	"#load:rx/playerdb",
         "hub:start/setup"
     ]
