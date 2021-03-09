@@ -19,5 +19,5 @@ execute at @e[tag=h.segment_loader] run setblock ~ ~1 ~ minecraft:redstone_block
 kill @e[tag=h.segment_loader]
 execute in hub:hub run forceload remove -15 -15 15 15
 
-scoreboard objectives add Hub trigger
+scoreboard objectives add hub trigger
 scoreboard objectives add h.quits custom:leave_game
