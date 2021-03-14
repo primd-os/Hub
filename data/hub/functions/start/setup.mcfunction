@@ -2,6 +2,7 @@ team leave @a
 effect give @a instant_health 1 100
 
 clear @a
+gamemode adventure @a
 execute as @a in hub:hub run tp @s 0 100 0 180 0
 execute in hub:hub run setworldspawn 0 100 0
 execute in hub:hub run spawnpoint 0 100 0 0 180
