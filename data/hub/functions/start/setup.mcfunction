@@ -1,3 +1,7 @@
+gamerule doImmediateRespawn true
+gamerule keepInventory true
+gamerule sendCommandFeedback false
+
 team leave @a
 effect give @a instant_health 1 100
 
