@@ -11,5 +11,5 @@ execute at @e[tag=h.segment_loader] run data modify block ~6 ~ ~ name set from s
 execute at @e[tag=h.segment_loader] run setblock ~6 ~-1 ~ minecraft:redstone_block
 execute at @e[tag=h.segment_loader] run fill ~6 ~-1 ~ ~6 ~ ~ air
 data remove storage hub:hub doorways[0]
-execute as @e[tag=h.segment_loader] at @s run tp @s ~ ~ ~-5
+execute as @e[tag=h.segment_loader] at @s run tp @s ~ ~ ~-10
 execute if data storage hub:hub doorways[0] run function hub:start/load_segments
