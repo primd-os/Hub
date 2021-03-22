@@ -6,6 +6,6 @@ effect clear @s
 
 effect give @s instant_health 1 100
 tp @s 0 100 0 180 0
-spawnpoint @s 0 100 0 180
+execute positioned 0 100 0 rotated 180 0 run function hub:main/death/spawnpoint
 gamemode adventure
 scoreboard players set @s hub 0

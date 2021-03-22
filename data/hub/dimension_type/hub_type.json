@@ -1,5 +1,5 @@
 {
-    "ambient_light": 0.5,
+    "ambient_light": 0,
     "ultrawarm": false,
     "bed_works": false,
     "coordinate_scale": 1,

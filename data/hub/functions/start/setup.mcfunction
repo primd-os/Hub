@@ -8,8 +8,7 @@ effect give @a instant_health 1 100
 clear @a
 gamemode adventure @a
 execute as @a in hub:hub run tp @s 0 100 0 180 0
-execute in hub:hub run setworldspawn 0 100 0
-execute as @a in hub:hub run spawnpoint @s 0 100 0 180
+execute as @a in hub:hub positioned 0 100 0 rotated 180 0 run function hub:main/death/spawnpoint
 
 execute in hub:hub run forceload add -15 -15 15 15
 execute in hub:hub run setblock 0 98 0 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"CLOCKWISE_180",posX:19,mode:"LOAD",posY:1,sizeX:13,posZ:40,integrity:1.0f,showair:0b,name:"hub:start_block",sizeY:10,sizeZ:13} destroy
