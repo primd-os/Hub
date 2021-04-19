@@ -27,9 +27,9 @@ scoreboard players set $iter rx.temp 0
 
 data modify storage rx:temp playerdb.uuid set from storage rx:global playerdb.uuid
 
-execute if data storage rx:temp playerdb.uuid run tellraw @s ["", {"text":"<<", "color": "#720026", "bold": true, "clickEvent": {"action": "run_command", "value": "/trigger rx.pdb.LT set -1"}, "hoverEvent": {"action": "show_text", "value":{"text":"Click to navigate","color":"#DAD6D6"}}}, " ", {"text": "Player UID List", "color":"#CE4257"}, " ", {"text":">>", "color": "#720026", "bold": true, "hoverEvent": {"action": "show_text", "value":{"text":"Click to navigate","color":"#DAD6D6"}}, "clickEvent": {"action": "run_command", "value": "/trigger rx.pdb.LT set 1"}}]
-execute if data storage rx:temp playerdb.uuid run function rx.playerdb:impl/admin/list/iter
-execute unless data storage rx:temp playerdb.uuid run tellraw @s [{"text":"No players to list", "color":"#DAD6D6"}]
+# execute if data storage rx:temp playerdb.uuid run tellraw @s ["", {"text":"<<", "color": "#720026", "bold": true, "clickEvent": {"action": "run_command", "value": "/trigger rx.pdb.LT set -1"}, "hoverEvent": {"action": "show_text", "value":{"text":"Click to navigate","color":"#DAD6D6"}}}, " ", {"text": "Player UID List", "color":"#CE4257"}, " ", {"text":">>", "color": "#720026", "bold": true, "hoverEvent": {"action": "show_text", "value":{"text":"Click to navigate","color":"#DAD6D6"}}, "clickEvent": {"action": "run_command", "value": "/trigger rx.pdb.LT set 1"}}]
+# execute if data storage rx:temp playerdb.uuid run function rx.playerdb:impl/admin/list/iter
+# execute unless data storage rx:temp playerdb.uuid run tellraw @s [{"text":"No players to list", "color":"#DAD6D6"}]
 
 # cleanup
 data modify storage rx:temp playerdb set value {}
