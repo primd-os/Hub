@@ -1,4 +1,5 @@
 scoreboard players enable @a hub
+scoreboard players add @a[tag=Parkour] h.Timer 1
 
 execute as @a[scores={h.quits=1..}] at @s run scoreboard players set @s hub 1
 scoreboard players set @a h.quits 0

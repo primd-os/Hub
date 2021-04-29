@@ -28,3 +28,9 @@ execute in hub:hub run forceload add 0 0
 scoreboard objectives add hub trigger
 scoreboard objectives add h.quits custom:leave_game
 scoreboard objectives add h.death deathCount
+scoreboard objectives add h.Timer dummy
+scoreboard objectives add h.Variables dummy
+scoreboard objectives add h.Constants dummy
+scoreboard players set TPS h.Constants 20
+scoreboard players set CSPT h.Constants 5
+scoreboard players set SPM h.Constants 60
