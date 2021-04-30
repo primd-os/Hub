@@ -1,3 +1,4 @@
+execute as @a unless entity @s[scores={hub=-2147483648..2147483647}] run scoreboard players set @s hub 1
 scoreboard players enable @a hub
 scoreboard players add @a[tag=Parkour] h.Timer 1
 
