@@ -1,0 +1,17 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:stone_button"
+        },
+        "title": "Button",
+        "description": "Gain access to secret chat",
+        "frame": "task",
+        "hidden": true
+    },
+    "parent": "hub:reward",
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

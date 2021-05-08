@@ -1,0 +1,16 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:gold_block"
+        },
+        "title": "Reward",
+        "description": "Collect the secret reward",
+        "frame": "task"
+    },
+    "parent": "hub:parkour_god",
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}
