@@ -2,7 +2,7 @@
 The datapack used for the PRIMD server hub. You can also use it to create your own hub with other or less minigames. Note this is only a base module and you will also need the datapacks for the minigames.
 
 ## Minigame Library
-* [Missile Mayhem](https://github.com/primd-os/MissileMars) - A missilewars type minigame with multiple missile sets and gamemodes
+* [Missile Mayhem](https://github.com/primd-os/MissileMayhem) - A missilewars type minigame with multiple missile sets and gamemodes
 * [Bridge World](https://github.com/primd-os/BridgeWorld) - A world where you can build with wool
 * [Bridge Fight](https://github.com/primd-os/bridgefight) - A minigame similar to hypixel's bridge duels except placing blocks is limited leading to strategy
 * [Ice Boom](https://github.com/primd-os/iceexplosion) - A minigame to survive the longest on a platform of decaying ice where destroyed ground becomes ice and you can cause explosions

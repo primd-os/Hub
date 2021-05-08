@@ -26,6 +26,7 @@ execute in hub:hub run forceload remove -15 -15 15 15
 execute in hub:hub run forceload add 0 0
 
 scoreboard objectives add hub trigger
+scoreboard objectives add credits trigger
 scoreboard objectives add h.quits custom:leave_game
 scoreboard objectives add h.death deathCount
 scoreboard objectives add h.Timer dummy

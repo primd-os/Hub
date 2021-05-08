@@ -1,0 +1,16 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:ender_pearl"
+        },
+        "title": "Fast Parkour",
+        "description": "Finish the lobby parkour in under 36 seconds",
+        "frame": "task"
+    },
+    "parent": "hub:parkour",
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

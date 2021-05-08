@@ -1,0 +1,16 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:oak_leaves"
+        },
+        "title": "Parkour God",
+        "description": "King of the Tree",
+        "frame": "task"
+    },
+    "parent": "hub:parkour",
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

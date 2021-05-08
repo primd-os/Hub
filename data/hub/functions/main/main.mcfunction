@@ -7,3 +7,9 @@ scoreboard players set @a h.quits 0
 execute as @a[scores={hub=1..}] in hub:hub run function hub:main/hub
 execute as @a[scores={h.death=1..},nbt={DeathTime:0s}] at @s run function hub:main/death/main
 execute in hub:hub run function hub:main/hub_main
+
+scoreboard players enable @a credits
+execute as @a[scores={credits=1}] run function hub:main/credits/piglet
+execute as @a[scores={credits=2}] run function hub:main/credits/ryan
+execute as @a[scores={credits=3}] run function hub:main/credits/max
+scoreboard players set @a credits 0
