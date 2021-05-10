@@ -2,7 +2,11 @@ gamerule doImmediateRespawn true
 gamerule keepInventory true
 gamerule sendCommandFeedback false
 
+team add Hub
+team modify Hub collisionRule never
+
 team leave @a
+team join Hub @a
 effect give @a instant_health 1 100
 
 clear @a

@@ -1,0 +1,13 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:changed_dimension",
+        "conditions": {
+          "from": "hub:hub"
+        }
+      }
+    },
+    "rewards": {
+      "function": "function hub:main/leave_hub"
+    }
+  }
