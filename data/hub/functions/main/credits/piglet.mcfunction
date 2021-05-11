@@ -1,2 +1,3 @@
 tellraw @s {"text": "Piglet/Ryan's Socials:"}
-tellraw @s {"text": "Youtube - https://www.youtube.com/channel/UCFhueoIecpX1GOhUDr--93Q"}
+tellraw @s [{"text": "Youtube - ","color": "red"},{"text":"https://www.youtube.com/channel/UCFhueoIecpX1GOhUDr--93Q","clickEvent": {"action": "open_url","value": "https://www.youtube.com/channel/UCFhueoIecpX1GOhUDr--93Q"}}]
+tellraw @s [{"text": "Github - ","color": "dark_gray"},{"text":"https://github.com/piglet1337","clickEvent": {"action": "open_url","value": "https://github.com/piglet1337"}}]

@@ -12,4 +12,5 @@ scoreboard players enable @a credits
 execute as @a[scores={credits=1}] run function hub:main/credits/piglet
 execute as @a[scores={credits=2}] run function hub:main/credits/ryan
 execute as @a[scores={credits=3}] run function hub:main/credits/max
+execute as @a[scores={credits=4}] run function hub:main/credits/devon
 scoreboard players set @a credits 0
