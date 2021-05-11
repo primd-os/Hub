@@ -8,6 +8,6 @@
       }
     },
     "rewards": {
-      "function": "function hub:main/leave_hub"
+      "function": "hub:main/leave_hub"
     }
   }
