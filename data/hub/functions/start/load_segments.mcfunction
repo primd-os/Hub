@@ -20,7 +20,7 @@ fill ~1 ~-3 ~3 ~1 ~-2 ~3 air
 data remove storage hub:hub doorways[0]
 data remove storage hub:hub doorwayflip[0]
 
-execute unless data storage hub:hub doorways[0] run setblock ~-3 ~ ~5 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"CLOCKWISE_180",posX:3,mode:"LOAD",posY:1,sizeX:13,posZ:3,integrity:1.0f,showair:0b,name:"hub:end",sizeY:5,sizeZ:7,showboundingbox:1b} destroy
-execute unless data storage hub:hub doorways[0] run setblock ~-3 ~1 ~5 minecraft:redstone_block
+execute unless data storage hub:hub doorways[0] run setblock ~-3 ~ ~-3 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"CLOCKWISE_180",posX:3,mode:"LOAD",posY:1,sizeX:13,posZ:3,integrity:1.0f,showair:0b,name:"hub:end",sizeY:5,sizeZ:7,showboundingbox:1b} destroy
+execute unless data storage hub:hub doorways[0] run setblock ~-3 ~1 ~-3 minecraft:redstone_block
 execute if data storage hub:hub doorways[0] positioned ~ ~ ~-8 run function hub:start/load_segments
 forceload remove ~-6 ~ ~1 ~5
