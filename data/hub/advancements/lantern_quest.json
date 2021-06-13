@@ -57,7 +57,8 @@
         "hub:l46": {"trigger": "minecraft:location","conditions": {"player": [{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{FallDistance:0.0f}"}}],"location": {"position": {"x": {"min": 9.013,"max": 9.987},"y": {"min": 132.5,"max": 134.5},"z": {"min": 17.013,"max": 17.987}},"dimension": "hub:hub"}}},
         "hub:l47": {"trigger": "minecraft:location","conditions": {"player": [{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{FallDistance:0.0f}"}}],"location": {"position": {"x": {"min": 5.013,"max": 5.987},"y": {"min": 132.5,"max": 134.5},"z": {"min": 24.013,"max": 24.987}},"dimension": "hub:hub"}}},
         "hub:l48": {"trigger": "minecraft:location","conditions": {"player": [{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{FallDistance:0.0f}"}}],"location": {"position": {"x": {"min": 3.013,"max": 3.987},"y": {"min": 133.5,"max": 135.5},"z": {"min": 27.013,"max": 27.987}},"dimension": "hub:hub"}}},
-        "hub:l49": {"trigger": "minecraft:location","conditions": {"player": [{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{FallDistance:0.0f}"}}],"location": {"position": {"x": {"min": -6.987,"max": -6.013},"y": {"min": 138.5,"max": 140.5},"z": {"min": 12.013,"max": 12.987}},"dimension": "hub:hub"}}}
+        "hub:l49": {"trigger": "minecraft:location","conditions": {"player": [{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{FallDistance:0.0f}"}}],"location": {"position": {"x": {"min": -6.987,"max": -6.013},"y": {"min": 138.5,"max": 140.5},"z": {"min": 12.013,"max": 12.987}},"dimension": "hub:hub"}}},
+        "hub:l50": {"trigger": "minecraft:location","conditions": {"player": [{"condition": "minecraft:entity_properties","entity": "this","predicate": {"nbt": "{FallDistance:0.0f}"}}],"location": {"position": {"x": {"min": 3.013,"max": 3.987},"y": {"min": 102.5,"max": 104.5},"z": {"min": 13.013,"max": 13.987}},"dimension": "hub:hub"}}}
     },
     "requirements": [
         ["hub:l1"],
@@ -108,6 +109,7 @@
         ["hub:l46"],
         ["hub:l47"],
         ["hub:l48"],
-        ["hub:l49"]
+        ["hub:l49"],
+        ["hub:l50"]
     ]
   }
