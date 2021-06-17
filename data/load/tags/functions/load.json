@@ -4,7 +4,7 @@
         "regex:load",
         "ntca:load",
         "string:load",
-    	"#load:rx/playerdb",
+    	"#rx.playerdb:load",
         "hub:start/setup"
     ]
 }

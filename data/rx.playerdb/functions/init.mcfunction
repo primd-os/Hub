@@ -5,12 +5,12 @@
 #> Does actual init
 
 #> LL Load + version
-scoreboard players set rx.PlayerDB load 1
+scoreboard players set rx.pdb load.status 1
 
-data modify storage rx:info playerdb.version set value {major: 1, minor: 0, patch: 3}
-scoreboard players set rx.pdb.major load 1
-scoreboard players set rx.pdb.minor load 0
-scoreboard players set rx.pdb.patch load 3
+data modify storage rx:info playerdb.version set value {major: 1, minor: 2, patch: 0}
+scoreboard players set #rx.pdb.major load.status 1
+scoreboard players set #rx.pdb.minor load.status 2
+scoreboard players set #rx.pdb.patch load.status 0
 
 data modify storage rx:info playerdb.pretty_version set value '[{"storage": "rx:info", "nbt": "playerdb.version.major"}, ".", {"storage": "rx:info", "nbt": "playerdb.version.minor"}, ".", {"storage": "rx:info", "nbt": "playerdb.version.patch"}]'
 
@@ -43,6 +43,14 @@ scoreboard players set $256 rx.int 256
 
 #> start our tick loop
 schedule function rx.playerdb:tick 1t replace
+
+#> phi chunk
+# I'll need this in the future, + it's better than my rx-stand
+forceload remove -30000000 1600
+forceload add -30000000 1600
+execute unless block -30000000 0 1602 minecraft:yellow_shulker_box run setblock -30000000 0 1602 minecraft:yellow_shulker_box
+execute unless block -30000000 0 1603 minecraft:oak_wall_sign run setblock -30000000 0 1603 minecraft:oak_wall_sign[facing=south]
+fill -30000000 1 1600 -30000000 1 1615 minecraft:bedrock
 
 #> cool admin msg is cool
 tellraw @a[tag=rx.admin] [{"text":"", "color":"gray"}, {"nbt": "playerdb.pretty_name", "storage": "rx:info", "interpret": true}, " ", {"storage": "rx:info", "nbt": "playerdb.pretty_version", "interpret": true}, " loaded"]

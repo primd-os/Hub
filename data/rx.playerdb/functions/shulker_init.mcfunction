@@ -4,14 +4,20 @@
 #> @s: 
 #> Does actual init
 
+scoreboard players set rx.PlayerDB load.status 1
+
 data modify storage rx:info playerdb.name set value 'PlayerDB'
 data modify storage rx:info playerdb.pretty_name set value '[{"text":"P","color":"#dd9b14"},{"text":"l","color":"#df9412"},{"text":"a","color":"#e18e10"},{"text":"y","color":"#e3880e"},{"text":"e","color":"#e5810c"},{"text":"r","color":"#e77b0a"},{"text":"D","color":"#e97508"},{"text":"B","color":"#eb6f07"}]'
 
-data modify storage rx:info playerdb.version set value {major: 1, minor: 0, patch: 3}
+data modify storage rx:info playerdb.version set value {major: 1, minor: 2, patch: 0}
 data modify storage rx:info playerdb.pretty_version set value '[{"storage": "rx:info", "nbt": "playerdb.version.major"}, ".", {"storage": "rx:info", "nbt": "playerdb.version.minor"}, ".", {"storage": "rx:info", "nbt": "playerdb.version.patch"}]'
 
+scoreboard objectives add load.status dummy
+scoreboard players set rx.pdb.major load.status 1
+scoreboard players set rx.pdb.minor load.status 2
+scoreboard players set rx.pdb.patch load.status 0
+
 scoreboard objectives add rx.io dummy
-scoreboard objectives add rx.uid dummy
 scoreboard objectives add rx.int dummy
 scoreboard objectives add rx.temp dummy
 
@@ -19,7 +25,7 @@ scoreboard objectives add rx.pdb.list dummy
 scoreboard objectives add rx.pdb.HasEntry dummy
 
 scoreboard objectives add rx.pdb.LT trigger
-scoreboard objectives add rx.pbb.login minecraft.custom:minecraft.leave_game
+scoreboard objectives add rx.pdb.login minecraft.custom:minecraft.leave_game
 
 #> 0.8: uuid storage
 scoreboard objectives add rx.uuid0 dummy
