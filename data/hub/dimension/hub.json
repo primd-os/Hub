@@ -6,8 +6,8 @@
       },
       "layers": [
         {
-          "height": 1,
-          "blocks": ["minecraft:air"]
+          "block": "air",
+          "height": 1
         }
       ],
       "biome": "minecraft:the_void"

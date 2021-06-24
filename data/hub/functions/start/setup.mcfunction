@@ -1,6 +1,5 @@
 gamerule doImmediateRespawn true
 gamerule keepInventory true
-gamerule sendCommandFeedback false
 
 team add Hub
 team modify Hub collisionRule never
