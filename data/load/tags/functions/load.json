@@ -1,5 +1,6 @@
 {
     "values": [
+        "rx.playerdb:load",
         "substring:load",
         "regex:load",
         "ntca:load",
