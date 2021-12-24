@@ -5,7 +5,6 @@ scoreboard players set $total string 98
 scoreboard players set $queue string 0
 scoreboard players set $searching string -1
 scoreboard players set $helper string -1
-gamerule commandBlockOutput false
 
 execute in hub:hub run function string:run/reset
 data merge storage string:out {out:[]}

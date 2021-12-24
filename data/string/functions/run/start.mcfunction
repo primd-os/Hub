@@ -2,7 +2,6 @@
 function string:run/reset
 data merge block ~ ~ ~ {auto:0b}
 data merge block -30000000 1 74062 {Command:"help me"}
-gamerule sendCommandFeedback true
 
 # Storage
 data modify storage string:internal callback.command set from storage string:in callback.command

@@ -1,5 +1,9 @@
 gamerule doImmediateRespawn true
 gamerule keepInventory true
+gamerule fallDamage false
+gamerule showDeathMessages false
+gamerule commandBlockOutput false
+gamerule sendCommandFeedback true
 
 team add Hub
 team modify Hub collisionRule never
@@ -22,14 +26,31 @@ execute in hub:hub positioned 0 98 -16 run function hub:start/load_segments
 
 execute in hub:hub run forceload remove all
 execute in hub:hub run forceload add -30000000 74049
+execute in hub:hub run forceload add 0 0
 
 scoreboard objectives add hub trigger
 scoreboard objectives add credits trigger
-scoreboard objectives add h.quits custom:leave_game
-scoreboard objectives add h.deathtime custom:time_since_death
-scoreboard objectives add h.Timer dummy
-scoreboard objectives add h.Variables dummy
-scoreboard objectives add h.Constants dummy
-scoreboard players set TPS h.Constants 20
-scoreboard players set CSPT h.Constants 5
-scoreboard players set SPM h.Constants 60
+scoreboard objectives add hub.quits custom:leave_game
+scoreboard objectives add hub.deathtime custom:time_since_death
+scoreboard objectives add hub.Timer dummy
+
+scoreboard objectives add hub.HealthTimer dummy
+scoreboard objectives add hub.fallDistance dummy
+scoreboard objectives add hub.fallDmgPercent dummy
+
+scoreboard objectives add hub.coordX dummy
+scoreboard objectives add hub.coordY dummy
+scoreboard objectives add hub.coordZ dummy
+scoreboard objectives add hub.borderSize dummy
+scoreboard objectives add hub.borderSizeChange dummy
+scoreboard objectives add hub.borderChangeLength dummy
+
+scoreboard objectives add hub.Variables dummy
+scoreboard objectives add hub.Constants dummy
+scoreboard players set negative_one hub.Constants -1
+scoreboard players set two hub.Constants 2
+scoreboard players set five hub.Constants 5
+scoreboard players set hundred hub.Constants 100
+scoreboard players set TPS hub.Constants 20
+scoreboard players set CSPT hub.Constants 5
+scoreboard players set SPM hub.Constants 60

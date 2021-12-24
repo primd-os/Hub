@@ -1,2 +1,2 @@
 tag @s add Parkour
-scoreboard players set @s h.Timer 0
+scoreboard players set @s hub.Timer 0
