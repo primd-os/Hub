@@ -62,32 +62,46 @@ execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"bridgewor
 
 ### Gamerules
 
-The following gamerules are forced on by the hub
+The following gamerules are forced on by the hub. You should not adjust gamerules for compatibility reasons.
 
 * doImmediateRespawn - true
 * keepInventory - true
+* fallDamage - false
+  * Note that to adjust for this a `hub.fallDmgPercent` objective is provided, which you can use to readd fall damage. Setting it to `100` should roughly replicate vanilla behavior.
+* showDeathMessages - false
+* commandBlockOutput - false
+* sendCommandFeedback - true
 
 ### Parkour
 
 The hub has a built in parkour system you can use. Call `hub:parkour/start` to start parkour tracking and `hub:parkour/end_parkour` to stop tracking and report time. Remove the `Parkour` tag to cancel parkour tracking.
 
-### Other Notes
+### World Border
 
-* The hub will automaticly force players to spawn at their spawnpoint even if it is obstructed to prevent them being sent to the overworld when they shouldn't be.
+Since 1.18, world borders are global, but having a different world border per minigame is neccessary, so to account for this, you can create a marker with the tag `hub.border`, and set its `hub.borderSize` score to create a world border. The size is specified in hundredths of blocks to allow for a smooth transition of sizes. You can also set its `hub.borderChangeLength` and `hub.borderSizeChange` to make the border size change by `hub.borderSizeChange` every tick for `hub.borderChangeLength` ticks.
+
+### Spawn Point
+
+* The hub will automaticly force players to spawn at their spawnpoint even if it is obstructed to prevent them being sent to the overworld when they shouldn't be. Unfortunately this means that instead of the spawnpoint command you must use the `hub:main/death/spawnpoint` function.
 
 ### Included Libraries
 
-* <https://github.com/McTsts/Minecraft-String-Utilities> must execute commands in `hub:hub` dimension
-* <https://github.com/rx-modules/PlayerDB>
+* [String Utilities](https://github.com/McTsts/Minecraft-String-Utilities) by McTsts, Suso and gibbsly
+  * must execute commands in `hub:hub` dimension
+* [Player DB](https://github.com/rx-modules/PlayerDB) by rx
+* [yellow_shulker_box](https://lanternmc.com/yellow_shulker_box.json)
+  * Allows manipulating player inventories via nbt using an override to the yellow_shulker_box loot table so you can use a tool with the tag `drop_contents: 1b` in the loot command to give it's contents (ex. `loot give @s mine 0 0 0 air{drop_contents: 1b}`)
+
+If there is another library you would like added, feel free to create an issue.
 
 ## Creating a custom hub
 
 This datapack is not currently designed for custom hubs, however you can modify the structure files to create one.
 
 * `hub:start_block` - The main hub block
-* `hub:segment` - The repeating blocks heading out from the main hub that make up the paths to the minigames.
+* `hub:segment` - The repeating blocks heading out from the main hub that make up the paths to the minigames
 * `hub:end` - The block at the end of the repeating segments
-* `hub:unavailible` - The minigame entrance used to cap off the entrance if there are an odd number of minigames.
+* `hub:unavailible` - The minigame entrance used to cap off the entrance if there are an odd number of minigames
 
 Note that adjusting the size of any of these structures may cause problems and if you do so you will also likely need to adjust the entrances to the minigames you use. Other things you would have to adjust:
 
