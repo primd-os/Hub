@@ -15,7 +15,7 @@ execute as @a[scores={credits=3}] run function hub:main/credits/max
 execute as @a[scores={credits=4}] run function hub:main/credits/devon
 scoreboard players set @a credits 0
 
-execute as @a run function hub:damage/fall_damage
+execute as @a at @s run function hub:damage/fall_damage
 
 execute as @a[tag=hub.reset_health] run function hub:damage/reset_health
 function hub:border/main

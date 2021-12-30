@@ -41,6 +41,10 @@ scoreboard objectives add hub.fallDmgPercent dummy
 scoreboard objectives add hub.coordX dummy
 scoreboard objectives add hub.coordY dummy
 scoreboard objectives add hub.coordZ dummy
+
+scoreboard objectives add hub.borderCeiling dummy
+scoreboard objectives add hub.borderCeilingChange dummy
+
 scoreboard objectives add hub.borderSize dummy
 scoreboard objectives add hub.borderSizeChange dummy
 scoreboard objectives add hub.borderChangeLength dummy
@@ -49,7 +53,10 @@ scoreboard objectives add hub.Variables dummy
 scoreboard objectives add hub.Constants dummy
 scoreboard players set negative_one hub.Constants -1
 scoreboard players set two hub.Constants 2
+scoreboard players set three hub.Constants 3
+scoreboard players set four hub.Constants 4
 scoreboard players set five hub.Constants 5
+scoreboard players set twenty_five hub.Constants 25
 scoreboard players set hundred hub.Constants 100
 scoreboard players set TPS hub.Constants 20
 scoreboard players set CSPT hub.Constants 5

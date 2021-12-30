@@ -1,0 +1,12 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "player": {},
+      "effects": {
+        "minecraft:jump_boost": {
+          "amplifier": 0
+        }
+      }
+    }
+  }
