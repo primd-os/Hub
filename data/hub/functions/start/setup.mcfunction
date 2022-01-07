@@ -23,6 +23,7 @@ execute in hub:hub run setblock 0 99 0 redstone_block
 data modify storage hub:hub doorways set value []
 function #hub:doorway
 execute in hub:hub positioned 0 98 -16 run function hub:start/load_segments
+execute in hub:hub run summon armor_stand -2 102.75 -6.75 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:'{"text":"GAMES","color":"green","bold":true}',CustomNameVisible:1b}
 
 execute in hub:hub run forceload remove all
 execute in hub:hub run forceload add -30000000 74049

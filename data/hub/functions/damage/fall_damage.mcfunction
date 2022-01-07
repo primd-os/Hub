@@ -1,4 +1,4 @@
-execute store result score fallDistance hub.Variables run data get entity @s FallDistance
+execute unless score @s hub.fallDmgPercent matches 0 store result score fallDistance hub.Variables run data get entity @s FallDistance
 scoreboard players set damage hub.Variables 0
 execute if score fallDistance hub.Variables matches 0 run scoreboard players operation damage hub.Variables = @s hub.fallDistance
 scoreboard players remove damage hub.Variables 3
@@ -58,5 +58,5 @@ execute if score fallDistance hub.Variables matches 0 run scoreboard players ope
 execute if score fallDistance hub.Variables matches 0 run scoreboard players operation damage hub.Variables /= hundred hub.Constants
 execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/jump_boost/level1] run scoreboard players remove damage hub.Variables 1
 execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/jump_boost/level2] run scoreboard players remove damage hub.Variables 2
-execute at @s if score fallDistance hub.Variables matches 0 unless score damage hub.Variables matches ..0 as @s[gamemode=!creative] run function hub:damage/deal_damage
-execute store result score @s hub.fallDistance run data get entity @s FallDistance
+execute at @s if score fallDistance hub.Variables matches 0 unless score damage hub.Variables matches ..0 as @s[gamemode=!creative,gamemode=!spectator] run function hub:damage/deal_damage
+scoreboard players operation @s hub.fallDistance = fallDistance hub.Variables
