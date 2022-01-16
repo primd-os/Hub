@@ -7,6 +7,7 @@ gamerule sendCommandFeedback true
 
 team add Hub
 team modify Hub collisionRule never
+team modify Hub prefix {"text": "Hub | "}
 
 team leave @a
 team join Hub @a
