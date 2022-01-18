@@ -5,12 +5,12 @@ gamerule showDeathMessages false
 gamerule commandBlockOutput false
 gamerule sendCommandFeedback true
 
-team add Hub
-team modify Hub collisionRule never
-team modify Hub prefix {"text": "Hub | "}
+team add hub.Team
+team modify hub.Team collisionRule never
+team modify hub.Team prefix {"text": "Hub | "}
 
 team leave @a
-team join Hub @a
+team join hub.Team @a
 effect give @a instant_health 1 100
 
 clear @a

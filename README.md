@@ -7,7 +7,7 @@ The datapack used for the PRIMD server hub at `play.primd.net`. You can also use
 |                        Name                                 | Description
 | ----------------------------------------------------------- | ------------
 | [Missile Mayhem](https://github.com/primd-os/MissileMayhem) | A missilewars type minigame with multiple missile sets and gamemodes
-| [Bridge World](https://github.com/primd-os/BridgeWorld)     | A world where you can build with wool
+| [Bridge World](https://github.com/primd-os/Wool-World)     | A world where you can build with wool
 | [Bridge Fight](https://github.com/primd-os/bridgefight)     | A minigame similar to hypixel's bridge duels except placing blocks is limited leading to strategy
 | [Ice Boom](https://github.com/primd-os/iceexplosion)        | A minigame to survive the longest on a platform of decaying ice where destroyed ground becomes ice and you can cause explosions
 | [HubVanilla](https://github.com/primd-os/HubVanilla)        | Allows access to overworld via hub system
@@ -46,13 +46,13 @@ One of the most important things when adding a minigame is compatibility with al
 `#hub:doorway` should contain a function that adds the name of your doorway structure to the storage hub:hub doorways.
 
 ```mcfunction
-data modify storage hub:hub doorways append value "bridgeworld:doorway"
+data modify storage hub:hub doorways append value "example:doorway"
 ```
 
 `#hub:register_dimensions` should contain a function that checks if `rx:io playerdb.player.data.primd.hub.spawnDim` matches the name of a custom dimension of your minigame and if it does then executes `hub:main/death/warp` in that dimension.
 
 ```mcfunction
-execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"bridgeworld:bridgeworld"} in bridgeworld:bridgeworld run function hub:main/death/warp
+execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"example:example"} in example:example run function hub:main/death/warp
 ```
 
 ### Important function tags

@@ -1,7 +1,7 @@
 execute at @s run function #hub:hub
 
 team leave @s
-team join Hub @s
+team join hub.Team @s
 
 clear @s
 effect clear @s
