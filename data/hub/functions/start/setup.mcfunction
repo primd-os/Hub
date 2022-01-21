@@ -63,3 +63,5 @@ scoreboard players set hundred hub.Constants 100
 scoreboard players set TPS hub.Constants 20
 scoreboard players set CSPT hub.Constants 5
 scoreboard players set SPM hub.Constants 60
+
+function hub:main/main

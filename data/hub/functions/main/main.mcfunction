@@ -10,13 +10,15 @@ execute as @a[scores={hub.deathtime=1}] at @s run function hub:main/death/main
 execute in hub:hub run function hub:main/hub_main
 
 scoreboard players enable @a credits
-execute as @a[scores={credits=1}] run function hub:main/credits/piglet
-execute as @a[scores={credits=2}] run function hub:main/credits/ryan
-execute as @a[scores={credits=3}] run function hub:main/credits/max
-execute as @a[scores={credits=4}] run function hub:main/credits/devon
+execute as @a[scores={credits=1}] run function hub:main/credits
+execute as @a[scores={credits=2}] run function hub:main/credits/piglet
+execute as @a[scores={credits=3}] run function hub:main/credits/ryan
+execute as @a[scores={credits=4}] run function hub:main/credits/max
+execute as @a[scores={credits=5}] run function hub:main/credits/devon
 scoreboard players set @a credits 0
 
 execute as @a at @s run function hub:damage/fall_damage
 
 execute as @a[tag=hub.reset_health] run function hub:damage/reset_health
 function hub:border/main
+schedule function hub:main/main 1t replace

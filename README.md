@@ -1,16 +1,17 @@
 # Hub
 
-The datapack used for the PRIMD server hub at `play.primd.net`. You can also use it to create your own hub with other or less minigames. Note this is only a base module and you will also need the datapacks for the minigames. This repo, as well as all the minigames are licenced under the MIT liscence, meaning you can use them for any purpose without restriction.
+The datapack used for the PRIMD server hub system(Test server is `play.primd.net`). You can also use it to create your own hub with minigames that follow the proper format. Note this is only a base module and you will also need the datapacks for the minigames. This repo, as well as all the minigames are licenced under the MIT liscence, meaning you can use them for any purpose without restriction.
 
 ## Minigame Library
 
-|                        Name                                 | Description
-| ----------------------------------------------------------- | ------------
-| [Missile Mayhem](https://github.com/primd-os/MissileMayhem) | A missilewars type minigame with multiple missile sets and gamemodes
-| [Bridge World](https://github.com/primd-os/Wool-World)     | A world where you can build with wool
-| [Bridge Fight](https://github.com/primd-os/bridgefight)     | A minigame similar to hypixel's bridge duels except placing blocks is limited leading to strategy
-| [Ice Boom](https://github.com/primd-os/iceexplosion)        | A minigame to survive the longest on a platform of decaying ice where destroyed ground becomes ice and you can cause explosions
-| [HubVanilla](https://github.com/primd-os/HubVanilla)        | Allows access to overworld via hub system
+|                        Name                                      | Description
+| ---------------------------------------------------------------- | ------------
+| [Missile Mayhem](https://github.com/primd-os/MissileMayhem)      | A missilewars type minigame with multiple missile sets and gamemodes
+| [Bridge World](https://github.com/primd-os/Wool-World)           | A world where you can build with wool
+| [HubVanilla](https://github.com/primd-os/HubVanilla)             | Allows access to overworld via hub system
+| [Mini Railways](https://github.com/primd-os/Mini-Railways)       | A game inspired by mini motorways about quickly moving items with minecarts
+| [Ice Boom](https://github.com/primd-os/iceexplosion)(archived)   | A minigame to survive the longest on a platform of decaying ice where destroyed ground becomes ice and you can cause explosions
+| [Bridge Fight](https://github.com/primd-os/bridgefight)(archived)| A minigame similar to hypixel's bridge duels except placing blocks is limited leading to strategy
 
 ## Creating a World
 
@@ -36,6 +37,7 @@ One of the most important things when adding a minigame is compatibility with al
 
 * Do everything for your game in a custom dimension
 * Don't affect any players outside of your custom dimension
+* Due to compatibility problems you should not access the minecraft namespace at all except for tick and load function tags (which you don't need if you use [Lantern Load](https://github.com/LanternMC/Load))
 * Because you have to use a custom dimension everything must be constructed by your datapacks because you can't use a world download. The easiest way to do this is via structure blocks.
 * To prevent overlap of scoreboard variables prefix them. For example Missile Mayhem prefixes its scoreboards with `m.`. The exeption to this is triggers for usability purposes.
 * It is also recommended to do the same prefixing with tags.
@@ -49,10 +51,10 @@ One of the most important things when adding a minigame is compatibility with al
 data modify storage hub:hub doorways append value "example:doorway"
 ```
 
-`#hub:register_dimensions` should contain a function that checks if `rx:io playerdb.player.data.primd.hub.spawnDim` matches the name of a custom dimension of your minigame and if it does then executes `hub:main/death/warp` in that dimension.
+`#hub:register_dimensions` should contain a function that checks if `rx.playerdb:io player.data.primd.hub.spawnDim` matches the name of a custom dimension of your minigame and if it does then executes `hub:main/death/warp` in that dimension.
 
 ```mcfunction
-execute if data storage rx:io playerdb.player.data.primd.hub{spawnDim:"example:example"} in example:example run function hub:main/death/warp
+execute if data storage rx.playerdb:io player.data.primd.hub{spawnDim:"example:example"} in example:example run function hub:main/death/warp
 ```
 
 ### Important function tags
@@ -67,8 +69,9 @@ The following gamerules are forced on by the hub. You should not adjust gamerule
 * doImmediateRespawn - true
 * keepInventory - true
 * fallDamage - false
-  * Note that to adjust for this a `hub.fallDmgPercent` objective is provided, which you can use to readd fall damage. Setting it to `100` should roughly replicate vanilla behavior.
+  * Note that to adjust for this a `hub.fallDmgPercent` objective is provided, which you can use to apply fall damage. Setting it to `100` should roughly replicate vanilla behavior.
 * showDeathMessages - false
+  * Related to this, if you do create a death message system for your minigame the messages should only display in your custom dimension(s).
 * commandBlockOutput - false
 * sendCommandFeedback - true
 
