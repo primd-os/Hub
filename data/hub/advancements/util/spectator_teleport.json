@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:changed_dimension",
+            "conditions": {
+                "player": {
+                    "player": {
+                        "gamemode": "spectator"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hub:main/spectator_teleport"
+    }
+}

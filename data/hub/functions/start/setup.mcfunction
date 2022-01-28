@@ -4,31 +4,27 @@ gamerule fallDamage false
 gamerule showDeathMessages false
 gamerule commandBlockOutput false
 gamerule sendCommandFeedback true
+difficulty normal
 
 team add hub.Team
 team modify hub.Team collisionRule never
 team modify hub.Team prefix {"text": "Hub | "}
 
-team leave @a
-team join hub.Team @a
-effect give @a instant_health 1 100
-
-clear @a
-gamemode adventure @a
-execute as @a in hub:hub run tp @s 0 100 0 180 0
-execute as @a in hub:hub positioned 0 100 0 rotated 180 0 run function hub:main/death/spawnpoint
+scoreboard players set @a hub 1
 
 execute in hub:hub run forceload add 0 0
-execute in hub:hub run setblock 0 98 0 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"kcor_noved",rotation:"NONE",posX:-28,mode:"LOAD",posY:1,sizeX:13,posZ:-7,integrity:1.0f,showair:0b,name:"hub:start_block",sizeY:10,sizeZ:13} destroy
-execute in hub:hub run setblock 0 99 0 redstone_block
+execute in hub:hub run setblock 0 2 0 minecraft:structure_block[mode=load]{posX:-28,mode:"LOAD",posY:0,posZ:-7,name:"hub:start_block"} destroy
+execute in hub:hub run setblock 0 3 0 redstone_block
 data modify storage hub:hub doorways set value []
 function #hub:doorway
-execute in hub:hub positioned 0 98 -16 run function hub:start/load_segments
-execute in hub:hub run summon armor_stand -2 102.75 -6.75 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:'{"text":"GAMES","color":"green","bold":true}',CustomNameVisible:1b}
+execute in hub:hub positioned 0 2 -16 run function hub:start/load_segments
+execute in hub:hub run summon armor_stand -2 5.75 -6.75 {Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:'{"text":"GAMES","color":"green","bold":true}',CustomNameVisible:1b}
 
 execute in hub:hub run forceload remove all
 execute in hub:hub run forceload add -30000000 74049
 execute in hub:hub run forceload add 0 0
+
+data modify storage hub:hub navigation_page set value '[{"nbt":"navigation_book[0]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[1]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[2]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[3]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[4]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[5]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[6]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[7]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[8]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[9]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[10]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[11]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[12]","storage":"hub:hub","interpret":true},"\\n",{"nbt":"navigation_book[13]","storage":"hub:hub","interpret":true}]'
 
 scoreboard objectives add hub trigger
 scoreboard objectives add credits trigger

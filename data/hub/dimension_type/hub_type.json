@@ -10,8 +10,8 @@
     "natural": false,
     "piglin_safe": false,
     "respawn_anchor_works": false,
-    "logical_height": 128,
+    "logical_height": 48,
     "infiniburn": "infiniburn_overworld",
     "min_y": 0,
-    "height": 256
+    "height": 64
 }
