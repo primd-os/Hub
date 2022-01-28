@@ -6,7 +6,7 @@ execute as @a[scores={hub.quits=1..}] at @s run scoreboard players set @s hub 1
 scoreboard players set @a hub.quits 0
 execute as @a[scores={hub=1..}] in hub:hub run function hub:main/hub
 execute as @a[scores={hub.deathtime=0}] at @s run scoreboard players set @s hub.fallDistance 0
-execute as @a[scores={hub.deathtime=1}] at @s run function hub:main/death/main
+execute as @a[scores={hub.deathtime=1},tag=!hub.disableSpawnControl] at @s run function hub:main/death/main
 execute in hub:hub run function hub:main/hub_main
 
 scoreboard players enable @a credits

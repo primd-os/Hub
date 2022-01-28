@@ -1,0 +1,17 @@
+[
+    {
+      "function": "minecraft:copy_nbt",
+      "source": {
+        "type": "minecraft:storage",
+        "source": "hub:hub"
+      },
+      "ops": [
+        {
+          "source": "navigation_page",
+          "target": "pages",
+          "op": "append"
+        }
+      ]
+    }
+  ]
+  
