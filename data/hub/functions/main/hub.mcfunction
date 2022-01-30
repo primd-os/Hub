@@ -22,7 +22,7 @@ item replace entity @s hotbar.0 with written_book{title:"Navigation Book",author
 data modify storage hub:hub navigation_book set value []
 data modify storage hub:hub navigation_book append value '{"text":" \\u0020 \\u0020 \\u0020-= ","color":"gray","extra":[{"text":"P","extra":[{"text":"R","color":"red"},"I",{"text":"M","color":"dark_blue"},"D"],"underlined":true,"bold":true,"color":"dark_gray"},{"text":" =-","color":"gray"}]}'
 data modify storage hub:hub navigation_book append value '{"text":" \\u0020 \\u0020 \\u0020Navigation","color":"dark_blue","bold":true}'
-data modify storage hub:hub navigation_book append value '{"text":" \\u0020 \\u0020 (Click To Join)","color":"blue"}'
+data modify storage hub:hub navigation_book append value '{"text":" \\u0020(Click Below To Join)","color":"blue"}'
 data modify storage hub:hub navigation_book append value '{"text":""}'
 function #hub:navigation
 item modify entity @s hotbar.0 hub:fill_navigation

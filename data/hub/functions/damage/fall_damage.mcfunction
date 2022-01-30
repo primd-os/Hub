@@ -12,6 +12,7 @@ execute if block ~ ~ ~ powder_snow run scoreboard players set dmgMultiplier hub.
 execute if block ~ ~ ~-1 powder_snow run scoreboard players set dmgMultiplier hub.Variables 0
 execute if block ~ ~ ~ cobweb run scoreboard players set dmgMultiplier hub.Variables 0
 execute if block ~ ~ ~ sweet_berry_bush run scoreboard players set dmgMultiplier hub.Variables 0
+execute if block ~ ~ ~ twisting_vines_plant run scoreboard players set dmgMultiplier hub.Variables 0
 execute if block ~ ~ ~ ladder run scoreboard players set dmgMultiplier hub.Variables 0
 execute if block ~ ~ ~ vine run scoreboard players set dmgMultiplier hub.Variables 0
 execute if block ~ ~ ~ #beds run scoreboard players operation dmgMultiplier hub.Variables /= two m.Constants
