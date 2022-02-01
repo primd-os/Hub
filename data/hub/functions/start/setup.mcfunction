@@ -35,7 +35,6 @@ scoreboard objectives add hub.Timer dummy
 scoreboard objectives add warp trigger
 
 scoreboard objectives add hub.HealthTimer dummy
-scoreboard objectives add hub.fallDistance dummy
 scoreboard objectives add hub.fallDmgPercent dummy
 
 scoreboard objectives add hub.coordX dummy

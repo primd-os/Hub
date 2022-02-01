@@ -1,24 +1,17 @@
-execute unless score @s hub.fallDmgPercent matches 0 store result score fallDistance hub.Variables run data get entity @s FallDistance
-scoreboard players set damage hub.Variables 0
-execute if score fallDistance hub.Variables matches 0 run scoreboard players operation damage hub.Variables = @s hub.fallDistance
-scoreboard players remove damage hub.Variables 3
-execute if score damage hub.Variables matches ..0 run scoreboard players set damage hub.Variables 0
-execute if score fallDistance hub.Variables matches 0 run scoreboard players operation damage hub.Variables *= @s hub.fallDmgPercent
+execute store result score damage hub.Variables run data get entity @s FallDistance
+scoreboard players remove damage hub.Variables 2
+scoreboard players operation damage hub.Variables *= @s hub.fallDmgPercent
 scoreboard players set dmgMultiplier hub.Variables 100
-execute if block ~ ~-1 ~ slime_block unless entity @s[predicate=hub:sneaking] run scoreboard players set dmgMultiplier hub.Variables 0
-execute if block ~ ~-1 ~ scaffolding if entity @s[predicate=hub:sneaking] run scoreboard players set dmgMultiplier hub.Variables 0
+execute as @s[predicate=hub:on_slime] unless entity @s[predicate=hub:sneaking] run scoreboard players set dmgMultiplier hub.Variables 0
+execute as @s[predicate=hub:in_climbable] run scoreboard players set dmgMultiplier hub.Variables 0
 execute if entity @s[predicate=hub:in_water] run scoreboard players set dmgMultiplier hub.Variables 0
 execute if block ~ ~ ~ powder_snow run scoreboard players set dmgMultiplier hub.Variables 0
 execute if block ~ ~ ~-1 powder_snow run scoreboard players set dmgMultiplier hub.Variables 0
 execute if block ~ ~ ~ cobweb run scoreboard players set dmgMultiplier hub.Variables 0
 execute if block ~ ~ ~ sweet_berry_bush run scoreboard players set dmgMultiplier hub.Variables 0
-execute if block ~ ~ ~ twisting_vines_plant run scoreboard players set dmgMultiplier hub.Variables 0
-execute if block ~ ~ ~ ladder run scoreboard players set dmgMultiplier hub.Variables 0
-execute if block ~ ~ ~ vine run scoreboard players set dmgMultiplier hub.Variables 0
-execute if block ~ ~ ~ #beds run scoreboard players operation dmgMultiplier hub.Variables /= two m.Constants
+execute as @s[predicate=hub:on_bed] run scoreboard players operation dmgMultiplier hub.Variables /= two m.Constants
 execute if block ~ ~-1 ~ hay_block run scoreboard players operation dmgMultiplier hub.Variables /= five m.Constants
 execute if block ~ ~-1 ~ honey_block run scoreboard players operation dmgMultiplier hub.Variables /= five m.Constants
-execute if entity @s[predicate=hub:in_lava] run scoreboard players operation dmgMultiplier hub.Variables /= two m.Constants
 execute if score fallDistance hub.Variables matches 0 run scoreboard players operation damage hub.Variables *= dmgMultiplier hub.Variables
 
 execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/resistance/level1] run scoreboard players operation damage hub.Variables *= four hub.Constants
@@ -60,4 +53,4 @@ execute if score fallDistance hub.Variables matches 0 run scoreboard players ope
 execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/jump_boost/level1] run scoreboard players remove damage hub.Variables 1
 execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/jump_boost/level2] run scoreboard players remove damage hub.Variables 2
 execute at @s if score fallDistance hub.Variables matches 0 unless score damage hub.Variables matches ..0 as @s[gamemode=!creative,gamemode=!spectator] run function hub:damage/deal_damage
-scoreboard players operation @s hub.fallDistance = fallDistance hub.Variables
+advancement revoke @s only hub:util/fall

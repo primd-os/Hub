@@ -2,11 +2,10 @@
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-      "location": {
-        "fluid": {
-          "tag": "minecraft:lava"
+        "location": {
+            "block": {
+                "tag": "minecraft:climbable"
+            }
         }
-      }
     }
-  }
-  
+}

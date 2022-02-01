@@ -18,7 +18,7 @@ gamemode adventure
 scoreboard players set @s hub.fallDmgPercent 0
 scoreboard players set @s hub 0
 
-item replace entity @s hotbar.0 with written_book{title:"Navigation Book",author:"PRIMD Team",resolved:0b,pages:[]} 1
+item replace entity @s hotbar.0 with written_book{title:"Navigation Book",author:"PRIMD Team",resolved:0b,pages:[],display:{Name:'{"text":"Navigation Book","color":"blue","italic":false,"bold":true}'},tag:"navigation_book"} 1
 data modify storage hub:hub navigation_book set value []
 data modify storage hub:hub navigation_book append value '{"text":" \\u0020 \\u0020 \\u0020-= ","color":"gray","extra":[{"text":"P","extra":[{"text":"R","color":"red"},"I",{"text":"M","color":"dark_blue"},"D"],"underlined":true,"bold":true,"color":"dark_gray"},{"text":" =-","color":"gray"}]}'
 data modify storage hub:hub navigation_book append value '{"text":" \\u0020 \\u0020 \\u0020Navigation","color":"dark_blue","bold":true}'
