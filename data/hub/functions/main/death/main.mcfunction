@@ -5,3 +5,4 @@ execute if data storage rx.playerdb:io player.data.primd.hub{spawnDim:"minecraft
 execute if data storage rx.playerdb:io player.data.primd.hub{spawnDim:"minecraft:the_end"} in minecraft:the_end run function hub:main/death/warp
 execute if data storage rx.playerdb:io player.data.primd.hub{spawnDim:"hub:hub"} in hub:hub run function hub:main/death/warp
 function #hub:register_dimensions
+kill @e[tag=hub.deathTracker,limit=1]

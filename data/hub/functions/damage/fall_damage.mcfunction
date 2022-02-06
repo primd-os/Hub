@@ -12,16 +12,16 @@ execute if block ~ ~ ~ sweet_berry_bush run scoreboard players set dmgMultiplier
 execute as @s[predicate=hub:on_bed] run scoreboard players operation dmgMultiplier hub.Variables /= two m.Constants
 execute if block ~ ~-1 ~ hay_block run scoreboard players operation dmgMultiplier hub.Variables /= five m.Constants
 execute if block ~ ~-1 ~ honey_block run scoreboard players operation dmgMultiplier hub.Variables /= five m.Constants
-execute if score fallDistance hub.Variables matches 0 run scoreboard players operation damage hub.Variables *= dmgMultiplier hub.Variables
+scoreboard players operation damage hub.Variables *= dmgMultiplier hub.Variables
 
-execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/resistance/level1] run scoreboard players operation damage hub.Variables *= four hub.Constants
-execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/resistance/level1] run scoreboard players operation damage hub.Variables /= five hub.Constants
-execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/resistance/level2] run scoreboard players operation damage hub.Variables *= three hub.Constants
-execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/resistance/level2] run scoreboard players operation damage hub.Variables /= five hub.Constants
-execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/resistance/level3] run scoreboard players operation damage hub.Variables *= two hub.Constants
-execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/resistance/level3] run scoreboard players operation damage hub.Variables /= five hub.Constants
-execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/resistance/level4] run scoreboard players operation damage hub.Variables /= five hub.Constants
-execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/resistance/level5] run scoreboard players set damage hub.Variables 0
+execute if predicate hub:effects/resistance/level1 run scoreboard players operation damage hub.Variables *= four hub.Constants
+execute if predicate hub:effects/resistance/level1 run scoreboard players operation damage hub.Variables /= five hub.Constants
+execute if predicate hub:effects/resistance/level2 run scoreboard players operation damage hub.Variables *= three hub.Constants
+execute if predicate hub:effects/resistance/level2 run scoreboard players operation damage hub.Variables /= five hub.Constants
+execute if predicate hub:effects/resistance/level3 run scoreboard players operation damage hub.Variables *= two hub.Constants
+execute if predicate hub:effects/resistance/level3 run scoreboard players operation damage hub.Variables /= five hub.Constants
+execute if predicate hub:effects/resistance/level4 run scoreboard players operation damage hub.Variables /= five hub.Constants
+execute if predicate hub:effects/resistance/level5 run scoreboard players set damage hub.Variables 0
 
 scoreboard players set EPF hub.Variables 25
 execute if predicate hub:armor/protection/head_1 run scoreboard players remove EPF hub.Variables 1
@@ -48,9 +48,9 @@ execute if score EPF hub.Variables matches ..4 run scoreboard players set EPF hu
 scoreboard players operation damage hub.Variables *= EPF hub.Variables
 scoreboard players operation damage hub.Variables /= twenty_five hub.Constants
 
-execute if score fallDistance hub.Variables matches 0 run scoreboard players operation damage hub.Variables /= hundred hub.Constants
-execute if score fallDistance hub.Variables matches 0 run scoreboard players operation damage hub.Variables /= hundred hub.Constants
-execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/jump_boost/level1] run scoreboard players remove damage hub.Variables 1
-execute if score fallDistance hub.Variables matches 0 as @s[predicate=hub:effects/jump_boost/level2] run scoreboard players remove damage hub.Variables 2
-execute at @s if score fallDistance hub.Variables matches 0 unless score damage hub.Variables matches ..0 as @s[gamemode=!creative,gamemode=!spectator] run function hub:damage/deal_damage
+scoreboard players operation damage hub.Variables /= hundred hub.Constants
+scoreboard players operation damage hub.Variables /= hundred hub.Constants
+execute if predicate hub:effects/jump_boost/level1 run scoreboard players remove damage hub.Variables 1
+execute if predicate hub:effects/jump_boost/level2 run scoreboard players remove damage hub.Variables 2
+execute unless score damage hub.Variables matches ..0 as @s[gamemode=!creative,gamemode=!spectator] run function hub:damage/deal_damage
 advancement revoke @s only hub:util/fall
