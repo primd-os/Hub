@@ -36,6 +36,7 @@ scoreboard objectives add warp trigger
 
 scoreboard objectives add hub.HealthTimer dummy
 scoreboard objectives add hub.fallDmgPercent dummy
+scoreboard objectives add hub.foodLevel food
 
 scoreboard objectives add hub.coordX dummy
 scoreboard objectives add hub.coordY dummy
