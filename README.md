@@ -57,9 +57,24 @@ data modify storage hub:hub doorways append value "example:doorway"
 execute if data storage rx.playerdb:io player.data.primd.hub{spawnDim:"example:example"} in example:example run function hub:main/death/warp
 ```
 
+`#hub:navigation` is responsible for adding entries to the navigation book, as well as storing where the entries are in the navigation book so you can tell if your entry has been clicked.
+
+```mcfunction
+execute store result score GameId ex.Variables run data get storage hub:hub navigation_book
+scoreboard players add GameId ex.Variables 1
+data modify storage hub:hub navigation_book append value '["- ",{"text":"[","extra":[{"text":"Example"},"]"]}]'
+```
+
+`#hub:warp_checks` is responsible for checking if your entry was pressed in the navigation book and joining the player to your game
+
+```mcfunction
+execute if score @s warp = GameId ex.Variables run function example:start/join_game
+```
+
 ### Important function tags
 
 * `#hub:hub` - Is called when players do /trigger hub
+* `#hub:credits` - Is called when players do /trigger credits
 * `#hub:inventory_changed` - Is called when a player's inventory changes, primarily useful for optimization
 
 ### Gamerules

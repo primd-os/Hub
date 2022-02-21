@@ -1,14 +1,7 @@
 {
     "criteria": {
         "requirement": {
-            "trigger": "minecraft:fall_from_height",
-            "conditions": {
-                "distance": {
-                    "y": {
-                        "min": 3
-                    }
-                }
-            }
+            "trigger": "minecraft:fall_from_height"
         }
     },
     "rewards": {

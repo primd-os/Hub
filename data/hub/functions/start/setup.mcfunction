@@ -38,9 +38,14 @@ scoreboard objectives add hub.HealthTimer dummy
 scoreboard objectives add hub.fallDmgPercent dummy
 scoreboard objectives add hub.foodLevel food
 
+scoreboard objectives add hub.prevPearlCount dummy
+scoreboard objectives add hub.pearlCount dummy
+scoreboard objectives add hub.baseFallDistance dummy
+
 scoreboard objectives add hub.coordX dummy
 scoreboard objectives add hub.coordY dummy
 scoreboard objectives add hub.coordZ dummy
+scoreboard objectives add hub.UUID1 dummy
 
 scoreboard objectives add hub.borderCeiling dummy
 scoreboard objectives add hub.borderCeilingChange dummy
