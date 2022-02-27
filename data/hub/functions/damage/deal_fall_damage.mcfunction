@@ -43,4 +43,3 @@ scoreboard players operation damage hub.Variables /= hundred hub.Constants
 execute if predicate hub:effects/jump_boost/level1 run scoreboard players remove damage hub.Variables 1
 execute if predicate hub:effects/jump_boost/level2 run scoreboard players remove damage hub.Variables 2
 execute unless score damage hub.Variables matches ..0 as @s[gamemode=!creative,gamemode=!spectator] run function hub:damage/deal_damage
-advancement revoke @s only hub:util/fall

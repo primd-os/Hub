@@ -19,4 +19,5 @@ execute if block ~ ~-1 ~ hay_block run scoreboard players operation dmgMultiplie
 execute if block ~ ~-1 ~ honey_block run scoreboard players operation dmgMultiplier hub.Variables /= five m.Constants
 scoreboard players operation damage hub.Variables *= dmgMultiplier hub.Variables
 
-function hub:damage/deal_fall_damage
+execute if score damage hub.Variables matches 1.. run function hub:damage/deal_fall_damage
+advancement revoke @s only hub:util/fall
