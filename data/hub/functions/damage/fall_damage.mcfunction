@@ -9,7 +9,20 @@ scoreboard players remove damage hub.Variables 2
 scoreboard players set dmgMultiplier hub.Variables 100
 execute as @s[predicate=hub:on_slime] unless entity @s[predicate=hub:sneaking] run scoreboard players set dmgMultiplier hub.Variables 0
 execute as @s[predicate=hub:in_climbable] run scoreboard players set dmgMultiplier hub.Variables 0
-execute if entity @s[predicate=hub:in_water] run scoreboard players set dmgMultiplier hub.Variables 0
+
+execute positioned ~-0.3 ~ ~-0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+execute positioned ~-0.3 ~ ~0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+execute positioned ~0.3 ~ ~-0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+execute positioned ~0.3 ~ ~0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+execute positioned ~-0.3 ~1 ~-0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+execute positioned ~-0.3 ~1 ~0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+execute positioned ~0.3 ~1 ~-0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+execute positioned ~0.3 ~1 ~0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+execute positioned ~-0.3 ~1.8 ~-0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+execute positioned ~-0.3 ~1.8 ~0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+execute positioned ~0.3 ~1.8 ~-0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+execute positioned ~0.3 ~1.8 ~0.3 if predicate hub:in_water run scoreboard players set dmgMultiplier hub.Variables 0
+
 execute if block ~ ~ ~ powder_snow run scoreboard players set dmgMultiplier hub.Variables 0
 execute if block ~ ~ ~-1 powder_snow run scoreboard players set dmgMultiplier hub.Variables 0
 execute if block ~ ~ ~ cobweb run scoreboard players set dmgMultiplier hub.Variables 0

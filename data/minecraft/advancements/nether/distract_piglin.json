@@ -173,6 +173,10 @@
               },
               "entity": "this"
             }
+          },
+          {
+            "condition": "minecraft:reference",
+            "name": "hub:in_survival"
           }
         ],
         "item": {
