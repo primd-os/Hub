@@ -1,10 +1,12 @@
 execute as @a unless entity @s[scores={hub=-2147483648..2147483647}] run scoreboard players set @s hub 1
 scoreboard players enable @a hub
+scoreboard players enable @a help
 scoreboard players add @a[tag=Parkour] hub.Timer 1
 
 execute as @a[scores={hub.quits=1..}] at @s run scoreboard players set @s hub 1
 scoreboard players set @a hub.quits 0
 execute as @a[scores={hub=1..}] in hub:hub run function hub:main/hub
+execute as @a[scores={help=1..}] at @s run function hub:main/help
 execute as @a[scores={hub.deathtime=1},tag=!hub.disableSpawnControl] at @s run function hub:main/death/main
 execute in hub:hub run function hub:main/hub_main
 

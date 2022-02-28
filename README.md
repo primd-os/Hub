@@ -10,6 +10,7 @@ The datapack used for the PRIMD server hub system(Test server is `play.primd.net
 | [Bridge World](https://github.com/primd-os/Wool-World)           | A world where you can build with wool
 | [HubVanilla](https://github.com/primd-os/HubVanilla)             | Allows access to overworld via hub system
 | [Mini Railways](https://github.com/primd-os/Mini-Railways)       | A game inspired by mini motorways about quickly moving items with minecarts
+| [Party Games](https://github.com/primd-os/party-games)           | A set of short random games to play with friends
 | [Ice Boom](https://github.com/primd-os/iceexplosion)(archived)   | A minigame to survive the longest on a platform of decaying ice where destroyed ground becomes ice and you can cause explosions
 | [Bridge Fight](https://github.com/primd-os/bridgefight)(archived)| A minigame similar to hypixel's bridge duels except placing blocks is limited leading to strategy
 
@@ -74,6 +75,7 @@ execute if score @s warp = GameId ex.Variables run function example:start/join_g
 ### Important function tags
 
 * `#hub:hub` - Is called when players do /trigger hub
+* `#hub:help` - Is called when players do /trigger help. You should only show help information for triggers players can actually use
 * `#hub:credits` - Is called when players do /trigger credits
 * `#hub:inventory_changed` - Is called when a player's inventory changes, primarily useful for optimization
 
