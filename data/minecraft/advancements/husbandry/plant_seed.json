@@ -19,62 +19,62 @@
     "wheat": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "block": "minecraft:wheat"
-      },
-      "player": [
-        {
-          "condition": "minecraft:reference",
-          "name": "hub:in_survival"
-        }
-      ]
+        "block": "minecraft:wheat",
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "hub:in_survival"
+          }
+        ]
+      }
     },
     "pumpkin_stem": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "block": "minecraft:pumpkin_stem"
-      },
-      "player": [
-        {
-          "condition": "minecraft:reference",
-          "name": "hub:in_survival"
-        }
-      ]
+        "block": "minecraft:pumpkin_stem",
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "hub:in_survival"
+          }
+        ]
+      }
     },
     "melon_stem": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "block": "minecraft:melon_stem"
-      },
-      "player": [
-        {
-          "condition": "minecraft:reference",
-          "name": "hub:in_survival"
-        }
-      ]
+        "block": "minecraft:melon_stem",
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "hub:in_survival"
+          }
+        ]
+      }
     },
     "beetroots": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "block": "minecraft:beetroots"
-      },
-      "player": [
-        {
-          "condition": "minecraft:reference",
-          "name": "hub:in_survival"
-        }
-      ]
+        "block": "minecraft:beetroots",
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "hub:in_survival"
+          }
+        ]
+      }
     },
     "nether_wart": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "block": "minecraft:nether_wart"
-      },
-      "player": [
-        {
-          "condition": "minecraft:reference",
-          "name": "hub:in_survival"
-        }
-      ]
+        "block": "minecraft:nether_wart",
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "hub:in_survival"
+          }
+        ]
+      }
     }
   },
   "requirements": [
