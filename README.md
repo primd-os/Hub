@@ -8,7 +8,7 @@ The datapack used for the PRIMD server hub system(Test server is `play.primd.net
 | ---------------------------------------------------------------- | ------------
 | [Missile Mayhem](https://github.com/primd-os/MissileMayhem)      | A missilewars type minigame with multiple missile sets and gamemodes
 | [Mini Railways](https://github.com/primd-os/Mini-Railways)       | A game inspired by mini motorways about quickly moving items with minecarts
-| [Biome Bout](hhttps://github.com/primd-os/BiomeBout)             | A unique mix of skywars and uhc
+| [Biome Bout](https://github.com/primd-os/BiomeBout)             | A unique mix of skywars and uhc
 | [Bridge World](https://github.com/primd-os/Wool-World)           | A world where you can build with wool
 | [HubVanilla](https://github.com/primd-os/HubVanilla)             | Allows access to overworld via hub system
 | [Party Games](https://github.com/primd-os/party-games)           | A set of short random games to play with friends
