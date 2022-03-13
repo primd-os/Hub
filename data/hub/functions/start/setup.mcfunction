@@ -1,6 +1,6 @@
 gamerule doImmediateRespawn true
 gamerule keepInventory true
-gamerule fallDamage false
+gamerule fallDamage true
 gamerule showDeathMessages false
 gamerule commandBlockOutput false
 gamerule sendCommandFeedback true
@@ -37,6 +37,7 @@ scoreboard objectives add warp trigger
 
 scoreboard objectives add hub.HealthTimer dummy
 scoreboard objectives add hub.fallDmgPercent dummy
+scoreboard objectives add hub.fallDistance dummy
 scoreboard objectives add hub.foodLevel food
 
 scoreboard objectives add hub.prevPearlCount dummy

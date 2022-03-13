@@ -5,6 +5,6 @@
         }
     },
     "rewards": {
-        "function": "hub:damage/fall_damage"
+        "function": "hub:damage/schedule_fall_damage"
     }
 }
