@@ -87,7 +87,6 @@ The following gamerules are forced on by the hub. You should not adjust gamerule
 * doImmediateRespawn - true
 * keepInventory - true
 * fallDamage - true
-  * Note that to adjust for this a `hub.fallDmgPercent` objective is provided, which you can use to avoid or partially apply fall damage. Note if you set this to anything less than 100 jump boost will not work, so using feather falling instead is recomended.
 * showDeathMessages - false
   * Related to this, if you do create a death message system for your minigame the messages should only display in your custom dimension(s).
 * commandBlockOutput - false

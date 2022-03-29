@@ -5,6 +5,7 @@
         "regex:load",
         "ntca:load",
         "string:load",
-        "hub:start/setup"
+        "hub:start/setup",
+		"rx:load"
     ]
 }

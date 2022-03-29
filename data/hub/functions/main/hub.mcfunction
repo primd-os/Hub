@@ -17,7 +17,6 @@ effect give @s instant_health 1 100
 tp @s 0 3 0 180 0
 execute positioned 0 3 0 rotated 180 0 run function hub:main/death/spawnpoint
 gamemode adventure
-scoreboard players set @s hub.fallDmgPercent 0
 scoreboard players set @s hub 0
 
 item replace entity @s hotbar.0 with written_book{title:"Navigation Book",author:"PRIMD Team",resolved:0b,pages:[],display:{Name:'{"text":"Navigation Book","color":"blue","italic":false,"bold":true}'},tag:"navigation_book"} 1

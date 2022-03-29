@@ -18,11 +18,6 @@ execute as @a[scores={credits=4}] run function hub:main/credits/max
 execute as @a[scores={credits=5}] run function hub:main/credits/devon
 scoreboard players set @a credits 0
 
-execute as @a unless score @s hub.UUID1 matches -2147483648..2147483647 store result score @s hub.UUID1 run data get entity @s UUID[0]
-execute as @e[type=ender_pearl] unless score @s hub.UUID1 matches -2147483648..2147483647 store result score @s hub.UUID1 run data get entity @s Owner[0]
-execute as @a at @s run function hub:main/check_pearl
-execute as @a[scores={hub.fallDmgPercent=..99}] run effect give @s jump_boost 1 255 true
-
 execute as @a[tag=hub.reset_health] run function hub:damage/reset_health
 function hub:border/main
 schedule function hub:main/main 1t replace
