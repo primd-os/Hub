@@ -2,6 +2,7 @@ kill @s[y=0,dy=-5]
 effect give @s saturation 2 2 true
 effect give @s resistance 2 4 true
 effect give @s weakness 2 2 true
+effect give @s jump_boost 2 255 true
 execute as @s[x=-4,y=41,z=9,distance=..2] run advancement grant @s only hub:parkour_god
 execute as @s[x=-4,y=41,z=9,distance=..2] run title @s actionbar {"text": "Parkour God"}
 execute as @s[x=-20,y=5,z=-5,distance=..1.5,tag=!Parkour] run give @s ender_eye{display:{Name:'{"text":"Parkour Restart","color":"green"}'},tag:"parkour_warp"}
