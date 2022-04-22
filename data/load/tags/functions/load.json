@@ -6,6 +6,6 @@
         "ntca:load",
         "string:load",
         "hub:start/setup",
-		"rx:load"
+		"rx:setup"
     ]
 }
