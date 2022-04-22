@@ -12,7 +12,7 @@ scoreboard players set $curr rx.kill_uid 1
 scoreboard players set $curr rx.atk_uid 1
 scoreboard players set $curr rx.def_uid 1
 
-advancement revoke @s only rx:death_cause/arrow
-advancement revoke @s only rx:death_cause/explosion
-advancement revoke @s only rx:death_cause/fire
-advancement revoke @s only rx:death_cause/melee
+advancement revoke @a only rx:death_cause/arrow
+advancement revoke @a only rx:death_cause/explosion
+advancement revoke @a only rx:death_cause/fire
+advancement revoke @a only rx:death_cause/melee

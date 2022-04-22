@@ -1,32 +1,18 @@
 {
     "condition": "minecraft:alternative",
     "terms": [
-        {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "dimension": "minecraft:overworld"
-                }
-            }
-        },
-        {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "dimension": "minecraft:the_nether"
-                }
-            }
-        },
-        {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-                "location": {
-                    "dimension": "minecraft:the_end"
-                }
-            }
-        }
+      {
+        "condition": "minecraft:reference",
+        "name": "hub:in_overworld"
+      },
+      {
+        "condition": "minecraft:reference",
+        "name": "hub:in_nether"
+      },
+      {
+        "condition": "minecraft:reference",
+        "name": "hub:in_end"
+      }
     ]
-}
+  }
+  
