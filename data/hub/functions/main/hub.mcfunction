@@ -4,6 +4,7 @@ team leave @s
 team join hub.Team @s
 
 tag @s remove hub.disableSpawnControl
+tag @s remove Parkour
 
 clear @s
 effect clear @s

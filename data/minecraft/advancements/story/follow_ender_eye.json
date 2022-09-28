@@ -19,10 +19,16 @@
     "in_stronghold": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "stronghold"
-        },
         "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "location": {
+                "structure": "minecraft:stronghold"
+              }
+            },
+            "entity": "this"
+          },
           {
             "condition": "minecraft:reference",
             "name": "hub:in_survival"

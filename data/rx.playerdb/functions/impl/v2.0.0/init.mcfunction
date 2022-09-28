@@ -26,9 +26,9 @@ scoreboard players set $19 rx.int 19
 scoreboard players set $64 rx.int 64
 scoreboard players set $256 rx.int 256
 schedule function rx.playerdb:impl/v2.0.0/tick 1 replace
-forceload remove -30000000 1600
-forceload add -30000000 1600
-execute unless block -30000000 0 1602 minecraft:yellow_shulker_box run setblock -30000000 0 1602 minecraft:yellow_shulker_box
-execute unless block -30000000 0 1603 minecraft:oak_wall_sign run setblock -30000000 0 1603 minecraft:oak_wall_sign[facing=south]
-fill -30000000 1 1600 -30000000 1 1615 minecraft:bedrock
+execute in hub:hub run forceload remove -30000000 1600
+execute in hub:hub run forceload add -30000000 1600
+execute in hub:hub unless block -30000000 0 1602 minecraft:yellow_shulker_box run setblock -30000000 0 1602 minecraft:yellow_shulker_box
+execute in hub:hub unless block -30000000 0 1603 minecraft:oak_wall_sign run setblock -30000000 0 1603 minecraft:oak_wall_sign[facing=south]
+execute in hub:hub run fill -30000000 1 1600 -30000000 1 1615 minecraft:bedrock
 tellraw @a[tag=rx.admin] ["", ["", {"storage": "rx:info", "nbt": "playerdb.pretty_name", "interpret": true}], {"text": " "}, {"storage": "rx:info", "nbt": "playerdb.pretty_version", "interpret": true, "color": "gray"}, {"text": " "}, {"text": "loaded", "color": "gray"}]

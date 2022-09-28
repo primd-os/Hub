@@ -19,10 +19,16 @@
     "in_city": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "endcity"
-        },
         "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "location": {
+                "structure": "minecraft:end_city"
+              }
+            },
+            "entity": "this"
+          },
           {
             "condition": "minecraft:reference",
             "name": "hub:in_survival"

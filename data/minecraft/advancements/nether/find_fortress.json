@@ -19,10 +19,16 @@
     "fortress": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "fortress"
-        },
         "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "location": {
+                "structure": "minecraft:fortress"
+              }
+            },
+            "entity": "this"
+          },
           {
             "condition": "minecraft:reference",
             "name": "hub:in_survival"
